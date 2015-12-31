@@ -18,6 +18,7 @@ defmodule Blog.Router do
 
     get "/", PageController, :index
     get "/greet", GreetController, :hello
+    get "/greet/:name", GreetController, :name
   end
 
   # Other scopes may use custom stacks.
