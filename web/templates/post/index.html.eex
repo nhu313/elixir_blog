@@ -5,6 +5,7 @@
     <tr>
       <th>Title</th>
       <th>Body</th>
+      <th>Draft</th>
 
       <th></th>
     </tr>
@@ -14,6 +15,7 @@
     <tr>
       <td><%= post.title %></td>
       <td><%= post.body %></td>
+      <td><%= post.draft %>
 
       <td class="text-right">
         <%= link "Show", to: post_path(@conn, :show, post), class: "btn btn-default btn-xs" %>

@@ -4,12 +4,13 @@ defmodule Blog.Post do
   schema "posts" do
     field :title, :string
     field :body, :string
-
+    field :draft, :boolean
+    
     timestamps
   end
 
   @required_fields ~w(title body)
-  @optional_fields ~w()
+  @optional_fields ~w(draft)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
