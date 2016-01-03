@@ -10,6 +10,14 @@ defmodule Blog.PostController do
     render(conn, "index.html", posts: posts)
   end
 
+  def draft(conn, _) do
+    query = from post in Post,
+            where: post.draft == true
+
+    posts = Repo.all(query)
+    render(conn, "index.html", posts: posts)
+  end
+
   def new(conn, _params) do
     changeset = Post.changeset(%Post{})
     render(conn, "new.html", changeset: changeset)

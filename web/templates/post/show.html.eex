@@ -11,6 +11,10 @@
     <strong>Body:</strong>
     <%= @post.body %>
   </li>
+  <li>
+    <strong>Draft:</strong>
+    <%= @post.draft %>
+  </li>
 
 </ul>
 
